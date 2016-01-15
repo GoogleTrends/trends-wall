@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Trends</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      var staticAssetPath = './'
+      var path = staticAssetPath + 'wall.js';
+      var script = document.createElement('script')
+      script.src = path
+      // Leave config where React can find it
+      window.spinRoomConfig = {
+        eventId: 5659118702428160,
+        eventName: "Google Trends",
+        staticAssetPath: staticAssetPath,
+        shareMode: true,
+      };
+      document.body.appendChild(script)
+
+      setTimeout(function() {
+        window.location.hash = '#/horserace/5629499534213120/US';
+      }, 500)
+    </script>
+  </body>
+</html>
