@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wall | Candidate Search Ranking | Google Trends Spin Room</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // weird dynamic include as webpack devserver is different port..
+      
+      var staticAssetPath = './'
+      
+      var path = staticAssetPath + 'wall.js';
+      var script = document.createElement('script')
+      script.src = path
+      // Leave config where React can find it
+      window.spinRoomConfig = {
+        eventId: 5759180434571264,
+        eventName: "02.09 NH primary DEM",
+        eventTime: "Feb. 9, 2016, 8 a.m.",
+        eventTheme: "democrat",
+        staticAssetPath: staticAssetPath,
+        
+        title: "Candidate Search Ranking"
+        
+      };
+
+      document.body.appendChild(script)
+
+      
+      window.spinRoomConfig.exportMode = true;
+      setTimeout(function() {
+        window.location.hash = '#/states/US-NH/5629499534213120/horserace';
+      }, 500)
+      
+
+    </script>
+  </body>
+</html>
